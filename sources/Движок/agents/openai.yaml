@@ -1,0 +1,4 @@
+interface:
+  display_name: "Freelearn Video"
+  short_description: "Создаёт русские уроки и медитации Freelearn"
+  default_prompt: "Используй $freelearn-video, чтобы подготовить сценарий и локально собрать русское видео Freelearn по этой теме или исходным материалам."

@@ -1,0 +1,121 @@
+{
+  "brand": "Freelearn",
+  "canvas": {
+    "16:9": [
+      1920,
+      1080
+    ],
+    "9:16": [
+      1080,
+      1920
+    ]
+  },
+  "fps": 30,
+  "font": "assets/fonts/InterVariable.ttf",
+  "colors": {
+    "background": "#f3f6f7",
+    "background_deep": "#e9eff1",
+    "card": "#ffffff",
+    "raised": "#eef3f5",
+    "ink": "#1b272e",
+    "muted": "#4f5e66",
+    "subtle": "#5b6971",
+    "line": "#dbe3e7",
+    "accent": "#2c6383",
+    "accent_ink": "#ffffff",
+    "accent_soft": "#e2edf3",
+    "accent_soft_ink": "#24546f",
+    "ridge_far": "#e2e9ec"
+  },
+  "timing": {
+    "intro_seconds": 1,
+    "outro_seconds": 3,
+    "transition_seconds": 0.9,
+    "transition_mode": "dissolve"
+  },
+  "voice": {
+    "engine": "external-approved-audio-only",
+    "fallback_engine": "espeak-ng",
+    "fallback_voice": "ru",
+    "fallback_rate_wpm": 145,
+    "fallback_pitch": 50,
+    "approved_for_publication": true,
+    "approved_command": [],
+    "approved_model_path": null,
+    "approved_voice_id": "synthetic-ru-male-v2",
+    "approved_credit_id": "tts-qwen3-base-synthetic",
+    "emotion_id": 0,
+    "speaker_name": "Синтетический мужской русский — кандидат 2",
+    "length_scale": 1.0,
+    "instruct": "A mature male native Russian speaker with a warm low-mid register. Calm, reassuring meditation guidance. Very slow unhurried delivery, gentle natural intonation, clear fully articulated Russian words, relaxed breath and soft sentence endings. No whispering, no theatrical announcer voice.",
+    "meditation_sentence_pause_seconds": 2.8,
+    "credit_dependencies": [
+      "tts-qwen3-voicedesign",
+      "mlx-audio-runtime"
+    ],
+    "rights_license_files": [
+      "assets/licenses/qwen3-apache2.txt",
+      "assets/licenses/mlx-audio-mit.txt"
+    ],
+    "reference_profile": "assets/voices/synthetic-ru-male-v2.json",
+    "generation_disabled_reason": "Прежний генератор удалён по указанию Романа 2026-11-03. Новая медитационная озвучка не настроена."
+  },
+  "audio": {
+    "sample_rate": 48000,
+    "meditation_speech_lufs": -30.5,
+    "meditation_music_lufs": -29,
+    "lesson_speech_lufs": -22,
+    "lesson_music_lufs": -35,
+    "ambient": {
+      "engine": "licensed-recording",
+      "revision": "Tranquility-USUAN1100581",
+      "approved_for_publication": true
+    },
+    "prompt_music_reduction_db": -6,
+    "meditation_prompt_music_reduction_db": -2,
+    "music_asset_id": "music-tranquility"
+  },
+  "theme": "light",
+  "themes": {
+    "light": {
+      "background": "#f3f6f7",
+      "background_deep": "#e9eff1",
+      "card": "#ffffff",
+      "raised": "#eef3f5",
+      "ink": "#1b272e",
+      "muted": "#4f5e66",
+      "subtle": "#5b6971",
+      "line": "#dbe3e7",
+      "accent": "#2c6383",
+      "accent_ink": "#ffffff",
+      "accent_soft": "#e2edf3",
+      "accent_soft_ink": "#24546f",
+      "ridge_far": "#e2e9ec"
+    },
+    "dark": {
+      "background": "#0e1418",
+      "background_deep": "#0a0f12",
+      "card": "#151d22",
+      "raised": "#1b252b",
+      "ink": "#e9eff2",
+      "muted": "#a9b6bd",
+      "subtle": "#8b989f",
+      "line": "#26323a",
+      "accent": "#9cc4da",
+      "accent_ink": "#0e1418",
+      "accent_soft": "#1b2f3a",
+      "accent_soft_ink": "#b4d4e4",
+      "ridge_far": "#11181c"
+    }
+  },
+  "design_source": {
+    "site": "FreeLearn Код и Видео/public",
+    "files": [
+      "styles.css",
+      "index.html",
+      "app.js"
+    ],
+    "snapshot_date": "2026-10-14",
+    "font_note": "Inter OFL retained for distributable video; site uses system fonts."
+  }
+}

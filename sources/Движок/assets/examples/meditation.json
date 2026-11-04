@@ -1,0 +1,79 @@
+{
+  "id": "sample-calm-pause",
+  "type": "meditation",
+  "title": "Спокойная пауза",
+  "format": "16:9",
+  "target_duration_seconds": 420,
+  "approved_voice": true,
+  "music": true,
+  "scenes": [
+    {
+      "kind": "intro",
+      "duration_seconds": 1,
+      "title": "Freelearn",
+      "caption": ""
+    },
+    {
+      "kind": "nature",
+      "asset_id": "nature-1",
+      "duration_seconds": 20,
+      "title": "Устройтесь удобно",
+      "caption": "Сядьте или лягте так, как вам удобно.",
+      "narration": "Найдите удобное положение. Если что-то неприятно, измените его или остановитесь."
+    },
+    {
+      "kind": "nature",
+      "asset_id": "nature-2",
+      "duration_seconds": 45,
+      "title": "Заметьте опору",
+      "caption": "Обратите внимание на опору под телом.",
+      "narration": "Заметьте, где тело соприкасается с опорой. Ничего не нужно менять."
+    },
+    {
+      "kind": "nature",
+      "asset_id": "nature-1",
+      "duration_seconds": 45,
+      "title": "Отметьте звуки",
+      "caption": "Послушайте звуки рядом и вдали.",
+      "narration": "Отметьте несколько звуков вокруг. Можно просто заметить их и снова вернуться к тишине."
+    },
+    {
+      "kind": "nature",
+      "asset_id": "nature-2",
+      "duration_seconds": 45,
+      "title": "Мягкое внимание",
+      "caption": "Если хочется — следите за обычным дыханием.",
+      "narration": "Если это комфортно, обратите внимание на естественное дыхание. Не нужно его замедлять или задерживать."
+    },
+    {
+      "kind": "nature",
+      "asset_id": "nature-1",
+      "duration_seconds": 200,
+      "title": "Побудьте в паузе",
+      "caption": "Оставьте время для спокойной паузы.",
+      "narration": "Сейчас можно ничего не делать. Если внимание отвлеклось, мягко отметьте это и выберите, куда его вернуть."
+    },
+    {
+      "kind": "nature",
+      "asset_id": "nature-2",
+      "duration_seconds": 40,
+      "title": "Заметьте пространство",
+      "caption": "Почувствуйте комнату вокруг.",
+      "narration": "Заметьте поверхность под собой, температуру воздуха и пространство вокруг."
+    },
+    {
+      "kind": "nature",
+      "asset_id": "nature-1",
+      "duration_seconds": 21,
+      "title": "Возвращение",
+      "caption": "Пошевелите пальцами, если хочется.",
+      "narration": "Постепенно вернитесь к окружающей обстановке. Можно пошевелить пальцами или просто открыть глаза."
+    },
+    {
+      "kind": "outro",
+      "duration_seconds": 3,
+      "title": "Freelearn",
+      "caption": "Завершайте в удобном темпе"
+    }
+  ]
+}

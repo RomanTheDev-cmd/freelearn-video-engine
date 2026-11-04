@@ -1,0 +1,45 @@
+{
+  "id": "sample-calm-preview",
+  "type": "meditation",
+  "title": "Тихая пауза",
+  "format": "16:9",
+  "target_duration_seconds": 24,
+  "approved_voice": true,
+  "music": true,
+  "scenes": [
+    {
+      "kind": "intro",
+      "duration_seconds": 1,
+      "title": "Freelearn",
+      "caption": ""
+    },
+    {
+      "kind": "nature",
+      "asset_id": "nature-1",
+      "duration_seconds": 10,
+      "title": "Устройтесь удобно",
+      "caption": "Почувствуйте опору под телом.",
+      "narration": "Почувствуйте опору под телом.",
+      "video_asset_id": "pexels-marros-alpine-lake",
+      "narration_lead_seconds": 1.8
+    },
+    {
+      "kind": "nature",
+      "asset_id": "nature-2",
+      "duration_seconds": 10,
+      "title": "Заметьте опору",
+      "caption": "Ничего не нужно менять.",
+      "narration": "Ничего не нужно менять.",
+      "video_asset_id": "pexels-dean-diemert-waterfall",
+      "narration_lead_seconds": 1.8,
+      "video_end_seconds": 5
+    },
+    {
+      "kind": "outro",
+      "duration_seconds": 3,
+      "title": "Freelearn",
+      "caption": "Завершайте в удобном темпе"
+    }
+  ],
+  "theme": "light"
+}

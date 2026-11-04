@@ -1,0 +1,65 @@
+> 2026-11-03 — (Codex): прежний генератор речи удалён по указанию Романа. Сохранённые записи и права остаются; автоматически восстанавливать прежние модели/окружение нельзя. Текущий учебный Tera — в sozdanie-video, Whisper — в .venv-asr. Новый медитационный нейросинтез отключён.
+
+## Ограничение расходов и порядок проверки (Роман, 2026-10-15)
+
+При обслуживании навыка и поиске ошибок не запускать сборку видео, синтез голоса или генерацию музыкальных вариантов. Проверять логику через `scripts/check_logic.py`, синтаксис и существующие отчёты. Команды рендера ниже относятся только к явному запросу на видео/аудио, а не к каждой правке. Повторно использовать кэш; не запускать автоматически матрицу вариантов. Если изменённый код ещё не проходил реальный экспорт, прямо написать «не проверено новым рендером».
+
+# Freelearn Video: local workflow and rights notes
+
+## Current Russian voice and music
+
+Сохранённые голосовые профили и музыка имеют исторические одобрения. Нового медитационного синтезатора сейчас нет; учебный голос Tera описан в sozdanie-video. Источник картинки, звука и права должны соответствовать фактическому материалу.
+
+## Legacy Dialogs-RU setup
+
+The skill source is iCloud `Главная рабочая папка ИИ/Служебное/Общие навыки/freelearn-video`, linked as `~/.claude/skills/freelearn-video` and `~/.codex/skills/freelearn-video` (same path works from both agents). Python environments live outside iCloud in `~/.local/share/freelearn-video` (`.venv`, `.venv-asr`, `.venv312`); `build_video.py` finds them there or at `FREELEARN_VIDEO_RUNTIME`. Rendering uses Homebrew `ffmpeg`, Pillow, and eSpeak NG for technical-only fallback. Neural narration uses a separate Python 3.12 environment (`.venv312`) because the tested PyTorch 2.3.1 wheel does not support this host's Python 3.14. Install locally without a paid service:
+
+```sh
+brew install ffmpeg espeak-ng
+python3 -m venv ~/.local/share/freelearn-video/.venv
+~/.local/share/freelearn-video/.venv/bin/python -m pip install pillow pyyaml
+python3.12 -m venv ~/.local/share/freelearn-video/.venv312
+~/.local/share/freelearn-video/.venv312/bin/pip install torch==2.3.1 numpy==1.26.4 scipy librosa huggingface_hub ruaccent==1.5.8.3
+```
+
+The previous candidate neural voice was Dialogs-RU VITS2, checkpoint repository `frappuccino/dialogs-ru-vits2`, pinned to revision `af7eabc15d087fce701de7261190ccb747c3bc7a`. The checkpoint is about 530 MB and is fetched once into the Hugging Face cache; it is not bundled. `scripts/dialogs_tts.py` uses the model code pinned under `assets/dialogs_src/` (MIT license), with checkpoint deserialization patched to PyTorch `weights_only=True`. RUAccent 1.5.8.3 marks Russian word stress locally before synthesis; its software is MIT and the accentuator model is Apache-2.0. It downloads its local models/dictionaries on first use. `HF_HUB_DISABLE_XET=1` is set by the adapter to avoid stalled Xet transfers. The bundled MIT normalizer spells out numbers and abbreviations.
+
+The upstream model card describes the model as a proof of concept and reports overall MOS about 2.83; voice quality and pronunciation still need human listening review. The dataset's exact OpenRAIL text is saved at `assets/licenses/dialogs-openrail-license.md`. It permits commercial use subject to its Section 2 restrictions, and treats model derivatives and outputs as derivatives. When distributing voice output, include the generated `.rights.txt` sidecar, which carries the full license and requires recipients to comply with Section 2. The current license text inspected for this setup has no 30-day notification requirement. Model author/citation attribution is recorded in `assets/credits.json`.
+
+FFmpeg's build on this Mac includes GPL components such as x264; the FFmpeg program itself is GPL-2.0-or-later for this installation. eSpeak NG and bundled speech data are GPL-3.0-or-later. The Inter font bundled here is OFL-1.1; its license is at `assets/fonts/OFL.txt`. The rendered audio/video files are separate outputs; do not redistribute bundled software or fonts without retaining their respective license notices.
+
+Итоговый формат — FullHD1920×1080; вертикальный только по запросу. Прежний активный медитационный генератор удалён. Для новых обучающих видео использовать выбранныйTera-процесс; для сохранённых записей не менять происхождение и одобрения. eSpeak остаётся только явно выбранным техническим прогоном, не автоматической заменой принятого голоса.
+
+- Piper `ru_RU-irina` has an unknown license for its RHVoice training data.
+- Piper `ru_RU-denis` and `ru_RU-dmitri` list CC0 for the Russian recordings but say they were fine-tuned from `en_US-lessac`; the Lessac source is distributed under a manually granted research license. The public video rights for these derived model weights are not established.
+- RHVoice Lab's Russian voices were previously recorded as CC BY-NC-ND 4.0 and remain rejected for this workflow pending a specific rights check. The presence of donations alone does not settle the NonCommercial assessment: CC states that it depends on the use and intent. NoDerivatives restricts sharing adaptations of the licensed material; the exact licensed object and whether generated speech is covered must be established separately. Do not infer either permission or a categorical ban for all generated speech from the NC/ND labels. See the [official CC FAQ](https://creativecommons.org/faq/#does-my-use-violate-the-noncommercial-clause-of-the-licenses) and [BY-NC-ND 4.0 legal code](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.en).
+
+Those alternatives remain rejected in `assets/credits.json`. Dialogs-RU was a previous candidate with its own license obligations and sound-quality limitations; it is not the current Base/VoiceDesign voice or an automatic fallback.
+
+## Creating a video
+
+1. Copy the relevant example from `assets/examples/` to a new script JSON in the output folder. Keep narration and visible caption text together in each scene. `duration_seconds` values include the time occupied by the scene; the sum must exactly equal `target_duration_seconds`.
+2. For lessons, use one skill/question and keep the target between 60 and 120 seconds. Their scene intervals should leave a short pause after narration. For meditation, include a one-second intro, explicit stage intervals summing to the requested total (normally 420 seconds), a quiet outro, and long silent practice intervals between occasional short spoken prompts. Use the persistent caption widget to keep each instruction visible during practice.
+3. Preview with the current voice candidate for local listening review:
+
+   ```sh
+   ~/.local/share/freelearn-video/.venv/bin/python ~/.claude/skills/freelearn-video/scripts/build_video.py /path/to/script.json --preview --voice review -o /path/to/preview.mp4
+   ```
+
+   The preview is capped at 24 seconds. Review the generated `preview.credits.txt`, `.render.json`, MP4 metadata, `.srt` sidecar, and representative frames. The meditation widget uses one stable caption per stage (caption_mode=stage), normally held for 40–60 seconds according to the scenario. Lessons default to caption_mode=speech. SRT follows each sentence’s WAV duration; only wrapped sub-lines use proportional timing. Captions are not phoneme aligned. Captions render inside a shared widget below the image, with the Freelearn mark at the bottom of every frame. If audio input is available, listen to the MP4; otherwise say that timbre and pronunciation have not been checked by listening. Roman supplies the listening assessment. Metadata cannot prove a natural voice.
+4. Keep the current voice in review status until accepted. Produce the requested complete local Full HD draft with `--voice review`; the approval flags need not block local rendering or autonomous checks. Configure the two approval flags only after the permanent voice is accepted. Use `scripts/check_video.py /path/to/output.mp4 --expected-seconds 60` to check streams, duration, Full HD dimensions, and representative frame brightness. For a vertical final, add `--format 9:16`. For a reduced preview only, add `--preview`.
+5. Inspect representative encoded frames at every scene/cue/transition and the end; inspect playback when available and disclose when continuous playback/listening were not performed. For a seven-minute meditation, validate all interval sums and the 420-second export. The checker now defaults to strict metadata/companions and saves hashes of the MP4 and checker; it confirms that MP4 did not change during scans. Use --legacy only for labelled historical input with incomplete metadata. The structural check is not a substitute for watching and listening to it.
+
+## Script format
+
+Required root fields: `id`, `type` (`lesson` or `meditation`), `title`, `format` (`16:9` or `9:16`), `target_duration_seconds`, `approved_voice`, `music`, and `scenes`. Optional music_asset_id selects a registered, licensed audio source when music=true; supplying it with music=false is an error. Every scene has `kind` (`intro`, `card`, `nature`, or `outro`) and `duration_seconds`. Scene narration is optional; when present, its measured audio length must fit the scene including the initial gap from narration_lead_seconds (default 0.4 s outside intro; meditation examples use 1.8 s) and sentence pauses. Shorten the text or extend the scene before exporting; never trim speech to force a fit. A `nature` scene also needs an `asset_id` from `assets/credits.json`. For moving footage use video_asset_id; optional video_offset_seconds and video_end_seconds select the source interval (start inclusive, end in source seconds). The interval must fit the real source and is gently stretched to the scene. Optional root theme is light or dark; --theme overrides it. The output theme remains fixed throughout the MP4. A card may have points: up to three short strings for numbered steps. Captions are rendered directly from the reviewed JSON text; no cloud transcription is run. See design.md for component sizing and the separate footer.
+
+The script caches generated slides and narration under `.freelearn-cache` in the output directory based on content and style. Music comes from the explicitly selected licensed local recording in assets/credits.json. The music_asset_id field overrides audio.music_asset_id; unknown/rejected sources stop before synthesis. Source SHA-256/rights and duration are checked; one continuous excerpt is faded without looping or silence padding. Picture dissolves preserve the exact widget/footer timeline; they do not shorten scene or audio timing. Use source intervals long enough to avoid extreme slowing. Animated stills use a subtle continuous zoom across caption changes. Inspect actual motion; no optical interpolation quality is assumed. Poster extraction starts within the selected video interval; renderer/font/media content hashes invalidate old static components. Short meditation instructions are reported as reading-time warnings with intro/outro exceptions. Source videos must fully decode and match their declared frame counts; a readable MP4 header alone is insufficient. Video segment lengths are quantized against cumulative frame boundaries and verified after encoding and concatenation to prevent subtitle drift; compatible encoded segments establish the original timeline, then picture dissolves receive one final video encode. Subsequent audio-only remixes copy video without another video encode. Preview uses reduced dimensions and frame rate; a full Full HD export is a separate operation.
+
+## Accuracy and media sourcing
+
+Use supplied screen captures or create checked screen demonstrations for software lessons. If exact screens/actions are absent, ask for that source instead of drawing an invented interface. The bundled landscape stills are CC0; source, author, rights, and license links are recorded in `assets/credits.json`. Reusable licensed video clips may be added with `media_type: video` and referenced by a scene `video_asset_id`; credits must record creator, original page, and exact license. Video clips use restrained color grading and the site's northern light/dark palette. They are cropped to the rounded picture window above the persistent lower caption widget. Spoken and prompt text remain in that widget, never over landscapes; the Freelearn mountain mark stays at the bottom of every frame. The current accepted ambient track is Tranquility — Kevin MacLeod, CC BY 4.0, selected by audio.music_asset_id. The old held-pad was rejected on 2026-10-20 and is not an automatic fallback. Replace or supplement any asset only after recording its author, original URL, exact license, license terms URL, and required attribution. The build script produces a sidecar credits file for used external assets.
+
+## Resource disclosure
+
+MP4 rendering uses local CPU, disk, and time. Preparing/reviewing content through Codex or Claude consumes those services' subscription limits. Neither time nor compute is unlimited, and this workflow does not call paid services or publish the output.

@@ -1,0 +1,20 @@
+{
+  "id": "synthetic-ru-male-v2",
+  "synthetic": true,
+  "recording_of_person": false,
+  "audio_file": "synthetic-ru-male-v2.wav",
+  "sha256": "72e2ef0a468bc4d2342c9c8bbf321a078ccaf7065560305c6d1d07596c5823ad",
+  "text": "Это спокойная практика внимания. Почувствуйте опору под телом. Замечайте звуки, мысли и ощущения.",
+  "generator_repo": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit",
+  "generator_revision": "5c390979e4b93af5f2932f90742ca99c7dd04687",
+  "seed": 17,
+  "length_scale": 1,
+  "native_seconds": 11.12,
+  "native_rate": 24000,
+  "reference_processing": "native model samples, no tempo, EQ or reverb; no clipping detected",
+  "instruction": "A native Russian adult male meditation guide. Warm low-mid register, clear resonant chest voice with standard Russian pronunciation and precise consonants. Slow unhurried phrases with gentle natural melodic variation. Fully voiced and audible, no whispering or breathiness, no gravel or theatrical announcer tone.",
+  "approved_for_publication": false,
+  "asr_exact_words": true,
+  "asr_model": "mlx-community/whisper-small-mlx",
+  "hearing_reviewed": false
+}

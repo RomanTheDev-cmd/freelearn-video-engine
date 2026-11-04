@@ -1,0 +1,16 @@
+{
+  "id": "synthetic-ru-male-v1",
+  "synthetic": true,
+  "recording_of_person": false,
+  "audio_file": "synthetic-ru-male-v1.wav",
+  "sha256": "73cc569583c9f00f2c6f8b3d6d75703ba03bf1b6736989b4efa1ac96cb5e951c",
+  "text": "Это короткая практика осознанности. Устройтесь удобно.",
+  "generator_repo": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit",
+  "generator_revision": "5c390979e4b93af5f2932f90742ca99c7dd04687",
+  "seed": 17,
+  "length_scale": 1.35,
+  "approved_for_publication": false,
+  "asr_exact_words": true,
+  "hearing_reviewed": false,
+  "instruction": "A mature male native Russian speaker with a warm low-mid register. Calm, reassuring meditation guidance. Very slow unhurried delivery, gentle natural intonation, clear fully articulated Russian words, relaxed breath and soft sentence endings. No whispering, no theatrical announcer voice."
+}

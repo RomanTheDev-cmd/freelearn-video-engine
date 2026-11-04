@@ -1,0 +1,30 @@
+{
+  "approved_by": "Роман",
+  "approved_at": "2026-10-20T12:03:35+03:00",
+  "user_statement": "Голос и музыку одобряю",
+  "scope": "Текущие голос, трек и баланс последнего MP4; это не разрешение на рендер или публикацию.",
+  "video": {
+    "path": "/Users/roman/Library/Mobile Documents/com~apple~CloudDocs/Главная рабочая папка ИИ/Проекты/FreeLearn/Экспорт/Медитация/Медитация по первой главе — 7 мин 30 сек/Медитация — первая глава, 7 минут 30 секунд.mp4",
+    "sha256": "94eb48080b94ac49bb3f1f3cd138a0d28f540add05ba460ecb879c41dd7af248"
+  },
+  "voice": {
+    "id": "synthetic-ru-male-v2",
+    "profile_sha256": "f68593622f628d6627275945a33d896e126f0b31fdc3b5ba0da9da18c6419f33",
+    "reference_audio_sha256": "72e2ef0a468bc4d2342c9c8bbf321a078ccaf7065560305c6d1d07596c5823ad",
+    "approved_for_publication": true
+  },
+  "music": {
+    "id": "music-tranquility",
+    "title": "Tranquility",
+    "author": "Kevin MacLeod",
+    "sha256": "c07984a29589bdd58101737979d19201dac4d77e52f32a034fcf27e46955386f",
+    "approved_for_publication": true
+  },
+  "mix": {
+    "meditation_speech_lufs": -30.5,
+    "meditation_music_lufs": -29,
+    "length_scale": 1.0,
+    "meditation_sentence_pause_seconds": 2.8
+  },
+  "provenance_note": "Profile JSON and historical render sidecars preserve their creation-time review flags. Current approval is recorded here and in style/credits; the profile and audio are unchanged to preserve speech-cache fingerprints."
+}
