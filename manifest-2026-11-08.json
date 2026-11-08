@@ -1,0 +1,565 @@
+{
+  "date": "2026-11-08",
+  "project": "freelearn-video-engine",
+  "base_snapshot": "snapshot-2026-11-04",
+  "roots": [
+    {
+      "label": "Движок",
+      "source": "/Users/roman/Library/Mobile Documents/com~apple~CloudDocs/Главная рабочая папка ИИ/Служебное/Общие навыки/freelearn-video"
+    }
+  ],
+  "files": [
+    {
+      "path": "Движок/CHANGELOG.md",
+      "size": 37145,
+      "mode": 420,
+      "mtime": 1793733448.4535427,
+      "sha256": "5f28b7070fbb05b166d2c575702097c2ee9e0f2ffef37b382480d36b09ccac4a"
+    },
+    {
+      "path": "Движок/ENGINE.md",
+      "size": 18150,
+      "mode": 420,
+      "mtime": 1793733448.4526658,
+      "sha256": "be7b898f06f7793692648c639cc8ba2d76ef5fb1469c946f104f0ecae85ff6b2"
+    },
+    {
+      "path": "Движок/VERSION",
+      "size": 6,
+      "mode": 420,
+      "mtime": 1793733448.4528325,
+      "sha256": "78b591400c56b7b67b8cb3b2b8a8e65e9093897f02ce0878e6b5405c68620fa7"
+    },
+    {
+      "path": "Движок/agents/openai.yaml",
+      "size": 389,
+      "mode": 420,
+      "mtime": 1791893123.0,
+      "sha256": "42a4d6b13aa7d8f409846af5569635ee696bfdb6e66373572db30345a2fd9033"
+    },
+    {
+      "path": "Движок/assets/credits.json",
+      "size": 25589,
+      "mode": 420,
+      "mtime": 1792526908.6619477,
+      "sha256": "02a25dd353ffe6238af55229d47f9f2c5b3a4a60b72313a851a9cde2713b46f8"
+    },
+    {
+      "path": "Движок/assets/style.json",
+      "size": 3632,
+      "mode": 420,
+      "mtime": 1793733265.093508,
+      "sha256": "30cef2aeba67d9c1fa633d6b7b5c318f8d8ae37ff52c4d0528e1b85b68155ae8"
+    },
+    {
+      "path": "Движок/assets/approvals/current-audio.json",
+      "size": 1649,
+      "mode": 420,
+      "mtime": 1792487356.392017,
+      "sha256": "9feb2a634fa2bdf3ad47494b2371b8ccb8621858e078eb5272fbd8947eb7ff0a"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/LICENSE-MIT.txt",
+      "size": 1063,
+      "mode": 420,
+      "mtime": 1791893728.0,
+      "sha256": "6571764afe6361eb24f5ce3a793a677a661d032e97d9c814e764a0ef96033b5e"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/S_monotonic_align.py",
+      "size": 3767,
+      "mode": 420,
+      "mtime": 1791893703.0,
+      "sha256": "0e146dd541e34264045145a6be66bb2f21ab016577fcbf02eea721c846e9a351"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/attentions.py",
+      "size": 20192,
+      "mode": 420,
+      "mtime": 1791893704.0,
+      "sha256": "cffff4c1be3361d7f2f7ad0ef080c5b6dad07b2c9c8d3876926901ac4a104155"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/commons.py",
+      "size": 4778,
+      "mode": 420,
+      "mtime": 1791893707.0,
+      "sha256": "f223dc1df791d2fb2953cfebd7014a7bc2a6ed614c05de6c17c7b44718a42cdd"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/config.json",
+      "size": 2139,
+      "mode": 420,
+      "mtime": 1791893707.0,
+      "sha256": "d798db0beb86848cc3fd0e1d6754e49ef546abbb2f251d3c5b2f132a87fb1da7"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/inference.py",
+      "size": 1229,
+      "mode": 420,
+      "mtime": 1791893708.0,
+      "sha256": "2a5618e6ef4ba1bb6f23e1e43e90399f1308571b4fecd75158d2528765219aab"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/models.py",
+      "size": 63411,
+      "mode": 420,
+      "mtime": 1791893710.0,
+      "sha256": "e26c0d3b73e4753eb4a802d57ef0b2fc5014863d5c88e1b897356bcc5e7290ce"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/modules.py",
+      "size": 13166,
+      "mode": 420,
+      "mtime": 1791893711.0,
+      "sha256": "f6514eaf7fab47d866ee0f9da94ca6ab6e45ebaf246151408da20dd14f242a75"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/pqmf.py",
+      "size": 4510,
+      "mode": 420,
+      "mtime": 1791893715.0,
+      "sha256": "0fa98f714f022602e3abbac850cb911c4ea4be81e131fc4bff2d1d7c475659c3"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/requirements.txt",
+      "size": 121,
+      "mode": 420,
+      "mtime": 1791893716.0,
+      "sha256": "242a5cdd0d1c951264657ab278882bf4778da7ba81c4d89edf1fb497fbd00f38"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/stft.py",
+      "size": 12016,
+      "mode": 420,
+      "mtime": 1791893719.0,
+      "sha256": "f29d68063bfeed72795d1b3f7f4202a8e57c76e8f42cb7a794790c117dbd29a1"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/transforms.py",
+      "size": 8490,
+      "mode": 420,
+      "mtime": 1791893724.0,
+      "sha256": "9d95e518610c35581c4f1c3b4e8eeca91b7c3d6899e7f0ebb86a0387394d3046"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/tts.py",
+      "size": 6985,
+      "mode": 420,
+      "mtime": 1791893728.0,
+      "sha256": "24d477dd81ea41823c476be4e0dbfe7b8b45da29c905d130240a839e758b9c2e"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/text/__init__.py",
+      "size": 527,
+      "mode": 420,
+      "mtime": 1791893721.0,
+      "sha256": "ecc9b1e5f6a246bf32c73a2719cef94c0be6d46a2acbf16877a9d6df7bf4746c"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/text/cleaners.py",
+      "size": 532,
+      "mode": 420,
+      "mtime": 1791893722.0,
+      "sha256": "24005ea0321df3d9de1b75256db0cb435da79002487ee52e6ed78cf37a14a841"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/text/rutextnorm.py",
+      "size": 65489,
+      "mode": 420,
+      "mtime": 1791893723.0,
+      "sha256": "002f4ffec66dcd85d0501fcb04bd751991ab29edf5784b251cff5a7c42079add"
+    },
+    {
+      "path": "Движок/assets/dialogs_src/text/symbols.py",
+      "size": 373,
+      "mode": 420,
+      "mtime": 1791893724.0,
+      "sha256": "d2b0295ff1e8b1e87f1baeaa2b065f91f3ace46e2b153db9a13db87af5deb0e1"
+    },
+    {
+      "path": "Движок/assets/examples/lesson.json",
+      "size": 2298,
+      "mode": 420,
+      "mtime": 1792487016.0884674,
+      "sha256": "fd205d33b11422a0af7c81be634f2c03785f11bc658c8be246fd4243302bef21"
+    },
+    {
+      "path": "Движок/assets/examples/meditation-preview.json",
+      "size": 1287,
+      "mode": 420,
+      "mtime": 1792487016.0883548,
+      "sha256": "10c99ee5f7ce8f427e769c32ea7cefdfeb9f9907e585161425bee0e8774d5b82"
+    },
+    {
+      "path": "Движок/assets/examples/meditation.json",
+      "size": 3388,
+      "mode": 420,
+      "mtime": 1792487016.0882187,
+      "sha256": "2b301fc735c6c335c05f7156c9bce46616c0f1dcd5799fce5b7fa47b1cec4a2d"
+    },
+    {
+      "path": "Движок/assets/fonts/InterVariable.ttf",
+      "size": 879708,
+      "mode": 420,
+      "mtime": 1791893003.0,
+      "sha256": "4989b125924991b90d05b2d16e0e388c48f7d5bb8b30539bbf9c755278d0ccaf"
+    },
+    {
+      "path": "Движок/assets/fonts/OFL.txt",
+      "size": 4380,
+      "mode": 420,
+      "mtime": 1791893003.0,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    {
+      "path": "Движок/assets/licenses/dialogs-openrail-license.md",
+      "size": 3736,
+      "mode": 420,
+      "mtime": 1791893835.0,
+      "sha256": "e136a6af001dd43a9002f20f39dd56d200afa9a6d408e28a625d90c9a0c22143"
+    },
+    {
+      "path": "Движок/assets/licenses/mlx-audio-mit.txt",
+      "size": 1070,
+      "mode": 420,
+      "mtime": 1791898531.0,
+      "sha256": "11d27e0259dec3a323fa6c04c330621d0950ab96c6760d5aac3e2e97229e6f22"
+    },
+    {
+      "path": "Движок/assets/licenses/qwen3-apache2.txt",
+      "size": 11343,
+      "mode": 420,
+      "mtime": 1791898530.0,
+      "sha256": "a44a6081c73ad75f0255bb2bb5cab74ef1829565a895a24e53a4f11290ab7655"
+    },
+    {
+      "path": "Движок/assets/music/tranquility.mp3",
+      "size": 39581992,
+      "mode": 420,
+      "mtime": 1792483586.4181151,
+      "sha256": "c07984a29589bdd58101737979d19201dac4d77e52f32a034fcf27e46955386f"
+    },
+    {
+      "path": "Движок/assets/music/chapters/almost-in-f.mp3",
+      "size": 19601695,
+      "mode": 420,
+      "mtime": 1792526818.2974882,
+      "sha256": "eafcf06af6c658e237c4c23408d3c3257ed1c0350767a2b89c38d5b8fe76d88d"
+    },
+    {
+      "path": "Движок/assets/music/chapters/ancient-winds.mp3",
+      "size": 19601685,
+      "mode": 420,
+      "mtime": 1792526822.516011,
+      "sha256": "906cab654677257147c25e16daca27232c0f6f99c4393c4c1d14be6f4cc0dfed"
+    },
+    {
+      "path": "Движок/assets/music/chapters/concentration.mp3",
+      "size": 15681486,
+      "mode": 420,
+      "mtime": 1792526748.8204591,
+      "sha256": "122cc0fcb91732e82af7acdbaf228bc64a5fa2efd7401679543b34536233067b"
+    },
+    {
+      "path": "Движок/assets/music/chapters/fluidscape.mp3",
+      "size": 19601708,
+      "mode": 420,
+      "mtime": 1792526792.2557187,
+      "sha256": "9944034959ce71a4aa23934dfd01e2e0848bde76309a78de182f63bcfa7133b9"
+    },
+    {
+      "path": "Движок/assets/music/chapters/garden-music.mp3",
+      "size": 15681548,
+      "mode": 420,
+      "mtime": 1792526817.247421,
+      "sha256": "d2fd2c0925969afa99b5568e1da5ed7b7582de09769f7a707b8b1d092e479a9d"
+    },
+    {
+      "path": "Движок/assets/music/chapters/music-for-manatees.mp3",
+      "size": 19601722,
+      "mode": 420,
+      "mtime": 1792526748.8196719,
+      "sha256": "370163e2bdba726640f5468fb450076d5b657b88fe277373988de7e9e01ed15b"
+    },
+    {
+      "path": "Движок/assets/music/chapters/new-direction.mp3",
+      "size": 19601647,
+      "mode": 420,
+      "mtime": 1792526786.374216,
+      "sha256": "4da2e1ddeab602c5d94393bda89db848e3e724f581102214542c253abf599c73"
+    },
+    {
+      "path": "Движок/assets/music/chapters/peace-of-mind.mp3",
+      "size": 19601715,
+      "mode": 420,
+      "mtime": 1792526763.6542487,
+      "sha256": "9dfcae80714c4bc04999b1081b7fc95eff0721838030b06bd73501b1ff80a266"
+    },
+    {
+      "path": "Движок/assets/music/chapters/wisps-of-whorls.mp3",
+      "size": 19601701,
+      "mode": 420,
+      "mtime": 1792526748.8192255,
+      "sha256": "cf1ada60dde410bb3802080148232519fe8731ae2a929d72cfaf21f272d0fbd2"
+    },
+    {
+      "path": "Движок/assets/nature/commons-1.jpg",
+      "size": 380022,
+      "mode": 420,
+      "mtime": 1791893007.0,
+      "sha256": "5ef268b1428d483c478d0a3bef5a76a086b29419f1ce094d81d62fa80b050d70"
+    },
+    {
+      "path": "Движок/assets/nature/commons-2.jpg",
+      "size": 604875,
+      "mode": 420,
+      "mtime": 1791893008.0,
+      "sha256": "49b8b34f533048fa8824333ed380f27e013eeed4456abadd9f3a24c6a459a82d"
+    },
+    {
+      "path": "Движок/assets/nature/pexels/dean-diemert-waterfall.mp4",
+      "size": 90190736,
+      "mode": 420,
+      "mtime": 1791902509.0,
+      "sha256": "2bebd47bf1df2d9a3fe0a192c6854c9f3abfbf8398eae9b5c127d0a26554d310"
+    },
+    {
+      "path": "Движок/assets/nature/pexels/marros-alpine-lake.mp4",
+      "size": 88449235,
+      "mode": 420,
+      "mtime": 1791896054.0,
+      "sha256": "01c42ea8f03033702f4a513b850717a8b3655481d5a7489eeb2c87c65345f168"
+    },
+    {
+      "path": "Движок/assets/nature/pexels/nelson-axigoth-fog-lake.mp4",
+      "size": 22209658,
+      "mode": 420,
+      "mtime": 1791896040.0,
+      "sha256": "7288f43dcb4dc7ab796900bb3e77bf5afcb6dd475813c91ca0a1f0f2200cf941"
+    },
+    {
+      "path": "Движок/assets/nature/pexels/tom-fisk-sunrise-lake.mp4",
+      "size": 155936552,
+      "mode": 420,
+      "mtime": 1791900462.0,
+      "sha256": "38605a61ce1634533c35f1ee4b2c07ef6bba8c27844f6658d90493489404c2d7"
+    },
+    {
+      "path": "Движок/assets/nature/pexels/wayne-speedy-misty-lake.mp4",
+      "size": 30943449,
+      "mode": 420,
+      "mtime": 1791896077.0,
+      "sha256": "9c6dda3cc2943b80d673f408f7e373b1980a43b0785427674f53f1b5c6ba84ec"
+    },
+    {
+      "path": "Движок/assets/voices/synthetic-ru-male-v1.json",
+      "size": 909,
+      "mode": 420,
+      "mtime": 1792054509.992134,
+      "sha256": "a04dee6057c30c7331f539bf56556e3caeb5501afdb2b4c749ec9f7609c00ad2"
+    },
+    {
+      "path": "Движок/assets/voices/synthetic-ru-male-v1.wav",
+      "size": 336744,
+      "mode": 420,
+      "mtime": 1792053769.2056282,
+      "sha256": "73cc569583c9f00f2c6f8b3d6d75703ba03bf1b6736989b4efa1ac96cb5e951c"
+    },
+    {
+      "path": "Движок/assets/voices/synthetic-ru-male-v2.json",
+      "size": 1205,
+      "mode": 420,
+      "mtime": 1792055846.4958997,
+      "sha256": "f68593622f628d6627275945a33d896e126f0b31fdc3b5ba0da9da18c6419f33"
+    },
+    {
+      "path": "Движок/assets/voices/synthetic-ru-male-v2.wav",
+      "size": 800684,
+      "mode": 420,
+      "mtime": 1792055745.9343069,
+      "sha256": "72e2ef0a468bc4d2342c9c8bbf321a078ccaf7065560305c6d1d07596c5823ad"
+    },
+    {
+      "path": "Движок/references/audio-quality.md",
+      "size": 14879,
+      "mode": 420,
+      "mtime": 1793733618.834799,
+      "sha256": "245cb8827c4e503a3014757dcf6f28c1b7985c45dafceb17c650a84e3f9d5194"
+    },
+    {
+      "path": "Движок/references/design.md",
+      "size": 9600,
+      "mode": 420,
+      "mtime": 1792485777.6362996,
+      "sha256": "ac92ed7fefacd7334ee01ce1fd5acbbbd044d33c2317781da8d04264fc5e98d2"
+    },
+    {
+      "path": "Движок/references/quickstart.md",
+      "size": 10517,
+      "mode": 420,
+      "mtime": 1793733618.835077,
+      "sha256": "c2e913d346f81320a4c22962ed9bb3b77074cc74627a27edcd641423e1077efb"
+    },
+    {
+      "path": "Движок/references/workflow.md",
+      "size": 14149,
+      "mode": 420,
+      "mtime": 1793733618.8349311,
+      "sha256": "df3be9aa0c502875b1e8fb6a260eeff8d4025f0769baa27c9c25bce55a858be9"
+    },
+    {
+      "path": "Движок/scripts/audio_plan.py",
+      "size": 2195,
+      "mode": 420,
+      "mtime": 1792352040.530294,
+      "sha256": "87fb84a5fac5ceaa63b03426e414ff350741b5505c07f047832cda943c195e06"
+    },
+    {
+      "path": "Движок/scripts/build_video.py",
+      "size": 41949,
+      "mode": 420,
+      "mtime": 1793733265.0938468,
+      "sha256": "1297da52705349cc532bd2a2917c713e09e343ea136580cce0b37cac1643451e"
+    },
+    {
+      "path": "Движок/scripts/check_audio_logic.py",
+      "size": 8928,
+      "mode": 420,
+      "mtime": 1792485363.4690962,
+      "sha256": "3c4bbade0aa3888ea43ce4ef2e285e540ade6f518ecd78f0faf23113505ea219"
+    },
+    {
+      "path": "Движок/scripts/check_logic.py",
+      "size": 42278,
+      "mode": 420,
+      "mtime": 1792485854.898492,
+      "sha256": "fc5ce0f811f5fb48c572504cc3f1702b9b68758730f1c52bed480233cf386a19"
+    },
+    {
+      "path": "Движок/scripts/check_review_logic.py",
+      "size": 8019,
+      "mode": 420,
+      "mtime": 1792486132.1784792,
+      "sha256": "f2f4e0524fec8ffe3f890a4076d32bf2e5b2facd17db6719e4ba2e51bb070a5a"
+    },
+    {
+      "path": "Движок/scripts/check_speech.py",
+      "size": 5656,
+      "mode": 420,
+      "mtime": 1792099193.3161511,
+      "sha256": "466f7c8fe89c4c5729f696859d05577274fe6f8b909ec41ea7801b9cc6f48329"
+    },
+    {
+      "path": "Движок/scripts/check_video.py",
+      "size": 18532,
+      "mode": 420,
+      "mtime": 1792486201.442381,
+      "sha256": "7f25ad8559ad268f15775053975dde9cd42c24254e687ae37d82cb8e9d567022"
+    },
+    {
+      "path": "Движок/scripts/check_workflow_logic.py",
+      "size": 6300,
+      "mode": 420,
+      "mtime": 1792486201.2244134,
+      "sha256": "ed9a252de2ebe4fd67aad8b09450e0bd1286fa03fb8972008249b3b38deafdfd"
+    },
+    {
+      "path": "Движок/scripts/dialogs_tts.py",
+      "size": 2215,
+      "mode": 420,
+      "mtime": 1791894816.0,
+      "sha256": "ffc1a5048d9b66fa6f9d7ef0547d17609ec02e618ceff10e8642e9aa9ea43bb5"
+    },
+    {
+      "path": "Движок/scripts/doctor.py",
+      "size": 3646,
+      "mode": 420,
+      "mtime": 1793733265.0944428,
+      "sha256": "b2690b02391b0c176cf597a54a7c62db14930f5bad7346eee54bcdc3ff6a92ff"
+    },
+    {
+      "path": "Движок/scripts/export_files.py",
+      "size": 4242,
+      "mode": 420,
+      "mtime": 1792099313.698548,
+      "sha256": "6a2888c3db61e3cd1fc9937e4b640995d2cb5417b6a9c440646d2a2a973ddfe2"
+    },
+    {
+      "path": "Движок/scripts/install_dialogs_model.py",
+      "size": 879,
+      "mode": 420,
+      "mtime": 1791893919.0,
+      "sha256": "34a181119e04bcb64c4d978fa3f8dc61ad8b7ae48b3868da2cc65fd2022a1ac4"
+    },
+    {
+      "path": "Движок/scripts/make_ambient.py",
+      "size": 5055,
+      "mode": 420,
+      "mtime": 1792352040.5975244,
+      "sha256": "708b42abc8c7afde922eee6d7f07444e0a022a0bbef93cadeb981b7136b707a3"
+    },
+    {
+      "path": "Движок/scripts/music_source.py",
+      "size": 4444,
+      "mode": 420,
+      "mtime": 1792486201.4422262,
+      "sha256": "d68a10d4a1a3a356913a602f87e05a11df0af9db98201260e844877e9a12c94b"
+    },
+    {
+      "path": "Движок/scripts/pcm_cache.py",
+      "size": 1196,
+      "mode": 420,
+      "mtime": 1792098916.9989288,
+      "sha256": "269a651454d5c9d1cb697890c539bbb06e249421bd4fdcddcd3413a4489add68"
+    },
+    {
+      "path": "Движок/scripts/preview_components.py",
+      "size": 2209,
+      "mode": 420,
+      "mtime": 1791973679.3512728,
+      "sha256": "a0404fb8d4a770483afd65faa44a749e86925ea488f3dcce9b385773f4dcbcca"
+    },
+    {
+      "path": "Движок/scripts/process_audio.py",
+      "size": 6714,
+      "mode": 420,
+      "mtime": 1792485384.0368779,
+      "sha256": "04779124ecf24a5547544cb739cadd1a0be038b6d33e5255efacbecc209a8a5d"
+    },
+    {
+      "path": "Движок/scripts/scenario.py",
+      "size": 7765,
+      "mode": 420,
+      "mtime": 1792486201.4424763,
+      "sha256": "b4020faf9c61f8a75342557752362428f4d59ac06859959042a2257d326d8f62"
+    },
+    {
+      "path": "Движок/scripts/visuals.py",
+      "size": 11593,
+      "mode": 420,
+      "mtime": 1792485879.8425133,
+      "sha256": "646ea5af33bd28ebb82452a17b9f174f45b5d2ff3b2d803a7a26d6c89f071725"
+    }
+  ],
+  "added_or_changed": [],
+  "removed_since_base": [],
+  "archive_assets": [],
+  "excluded_names": [
+    ".DS_Store",
+    ".cache",
+    ".freelearn-cache",
+    ".git",
+    ".openai",
+    ".venv",
+    "2026-11-04-private-git-projects",
+    "BambuNetworkEngine.conf",
+    "Git 3dmagic-telegram-posts",
+    "__pycache__",
+    "node_modules",
+    "vendor",
+    "venv",
+    "История плагина"
+  ],
+  "verification": "SHA-256 каждого файла сохранён в описи; архив обновления распакован заново и сверен по SHA-256."
+}
